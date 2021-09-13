@@ -1,0 +1,90 @@
+img {
+height: 70px;    
+}
+body{
+    background-color: #1b1b1b;
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+h1{
+    color:whitesmoke;
+    text-align: center;
+	width: 100%;
+    font-style: oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: initial;
+    cursor:pointer;
+}
+h2{
+    color:whitesmoke;
+    text-align: center;
+}
+button{
+    padding: 13px 16px;
+}
+.button {
+    background-color:#777; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 6px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    
+  }
+  
+  .button1 {
+    background-color:#777;
+    color: black; 
+    border: 2px solid blue;
+    
+    
+  }
+  
+  .button1:hover {
+    background-color: blue;
+    color: white;
+  }
+  
+  .button2 {
+    background-color:#777;
+    color: black; 
+    border: 2px solid red;
+  }
+  
+  .button2:hover {
+    background-color: red;
+    color: white;
+  }
+  .gombok{
+    display: flex;
+    justify-content: center;
+  }
+.elvesz{
+    border: 3px solid red;
+}
+input{
+    background-color: #eee;
+    border-radius: 5px;
+    width: 30px;
+    height: 40px;
+    margin-left: 50%;
+    margin-right: 50%;
+    
+}
+label{
+    color:whitesmoke;
+}
+input, label{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 10px 0;
+  }
