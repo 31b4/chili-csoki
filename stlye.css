@@ -87,4 +87,9 @@ input, label{
     display: inline-block;
     vertical-align: middle;
     margin: 10px 0;
-  }
+}
+footer{
+    color:whitesmoke;
+    position: absolute;
+    bottom: 10px;
+}
