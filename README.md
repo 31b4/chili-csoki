@@ -1,2 +1,2 @@
 # chili-csoki
-game
+test: https://csokieschili.netlify.app/
