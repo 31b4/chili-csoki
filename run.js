@@ -21,39 +21,44 @@ function clear(){
     for (let index = 0; index < 20; index++) {
         document.getElementById("chili"+index).style.border="3px solid black";
     }
+    document.getElementById("elvesz").value = 1;
+    numberOfElvettChili=0;
 }
 function ok(){
     var elvesz = document.getElementById("elvesz").value;
-    var sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
-    //console.log("teszt "+sum);
-    if (elvesz >0 && sum <21) {
-        console.log(elvesz)
-        for (let index = 0; index < elvesz; index++) {
-            document.getElementById("chili"+numberOfElvettChili).style.border="3px solid red";
-            numberOfElvettChili++;
+    if (elvesz >0&& elvesz<4) {
+        var sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
+        //console.log("teszt "+sum);
+        if (elvesz >0 && sum <21) {
+            console.log(elvesz)
+            for (let index = 0; index < elvesz; index++) {
+                document.getElementById("chili"+numberOfElvettChili).style.border="3px solid red";
+                numberOfElvettChili++;
+            }
+            if (jatekos) {
+                document.getElementById("jelenlegiJatekos").innerHTML="Jelenlegi játékos: Player 1";
+            }
+            else {
+                document.getElementById("jelenlegiJatekos").innerHTML="Jelenlegi játékos: Player 2";
+            }
+            jatekos=!jatekos;
+            //console.log(jatekos)
         }
-        if (jatekos) {
-            document.getElementById("jelenlegiJatekos").innerHTML="Jelenlegi játékos: Player 1";
-        }
-        else {
-            document.getElementById("jelenlegiJatekos").innerHTML="Jelenlegi játékos: Player 2";
-        }
-        jatekos=!jatekos;
-        //console.log(jatekos)
-    }
-    if(sum==20){
-        if (jatekos) {
-            alert("Player 2 nyert");
-        }
-        else{
-            alert("Player 1 nyert");
+        if(sum==20){
+            if (jatekos) {
+                alert("Player 2 nyert");
+            }
+            else{
+                alert("Player 1 nyert");
+            }
+            clear()
+            
+            pvp()
         }
     }
 }
 
 function pvp(){
-    numberOfElvettChili=0;
-    console.log("a");
     clear()
     document.getElementById("gamemode").innerHTML="Játék mód: PvP";
     document.getElementById("jelenlegiJatekos").innerHTML="Jelenlegi játékos: Player 1";

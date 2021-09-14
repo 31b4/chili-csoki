@@ -90,6 +90,10 @@ input, label{
 }
 footer{
     color:whitesmoke;
-    position: absolute;
+    
     bottom: 10px;
+    bottom:0;
+	  position:absolute;
+	  left: 0;
+	  
 }
