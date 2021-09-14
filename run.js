@@ -114,7 +114,6 @@ function playerFight() {
             alert("Player 1 nyert");
         }
         clear()
-        
     }
 }
 function ok(){
@@ -124,7 +123,6 @@ function ok(){
     else if (jatekMod=="pve"){
         AiRobot()
     }
-    
 }
 
 function pvp(){
