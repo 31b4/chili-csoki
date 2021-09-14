@@ -1,2 +1,2 @@
 # chili-csoki
-test: https://csokieschili.netlify.app/
+test:https://csokieschili.netlify.app/
