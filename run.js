@@ -64,9 +64,7 @@ function AiRobot(){
                 alert("Robot:\nElveszek "+rnd +" chilit")
             }
         }
-        
     }
-
 }
 function RobotElvesz(params) {
     var elvesz = document.getElementById("elvesz").value;
