@@ -38,15 +38,12 @@ button{
     margin: 4px 6px;
     transition-duration: 0.4s;
     cursor: pointer;
-    
   }
   
   .button1 {
     background-color:#777;
     color: black; 
     border: 2px solid blue;
-    
-    
   }
   
   .button1:hover {
