@@ -11,6 +11,16 @@ for (let index = 0; index < 20; index++) {
     chili.title="chili"+index;
     chili.id ="chili"+index;
     chili.border ="3px";
+    chili.onclick=function(){
+        if (jatekMod=="pvp") {
+            
+            playerFight(index)
+        }
+        else if (jatekMod=="pve"){
+           
+            AiRobot(index)
+        }
+    }
     console.log(chili.id)
     kepek.appendChild(chili)
 }
@@ -18,6 +28,8 @@ var csoki =document.createElement("img")
 csoki.src="kepek/csoki.jpg" 
 csoki.title="csocsolatte"
 kepek.appendChild(csoki)
+function kepreKatt(){
+}
 function clear(){
     for (let index = 0; index < 20; index++) {
         document.getElementById("chili"+index).style.border="3px solid black";
@@ -26,9 +38,17 @@ function clear(){
     numberOfElvettChili=0;
     jatekos =false;
 }
-function AiRobot(){
-    var elvesz = document.getElementById("elvesz").value;
-    var sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
+function AiRobot(params){
+    var elvesz;
+    var sum;
+    if(!(params>0)){
+        elvesz = document.getElementById("elvesz").value;
+        sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
+    }
+    else{
+        elvesz = parseInt(params+1)-parseInt(numberOfElvettChili);
+        sum = parseInt(elvesz) + parseInt(numberOfElvettChili)
+    }
     if (elvesz >0 &&elvesz<4 && sum <21) {
         for (let index = 0; index < elvesz; index++) {
             document.getElementById("chili"+numberOfElvettChili).style.border="3px solid #33b864";
@@ -77,9 +97,17 @@ function RobotElvesz(params) {
         //console.log("hahah"+numberOfElvettChili)
     }
 }
-function playerFight() {
-    var elvesz = document.getElementById("elvesz").value;
-    var sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
+function playerFight(params) {
+    var elvesz;
+    var sum;
+    if(!(params>0)){
+        elvesz = document.getElementById("elvesz").value;
+        sum = parseInt(elvesz) + parseInt(numberOfElvettChili);
+    }
+    else{
+        elvesz = parseInt(params+1)-parseInt(numberOfElvettChili);
+        sum = parseInt(elvesz) + parseInt(numberOfElvettChili)
+    }
     //console.log("teszt "+sum);
     if (elvesz >0 &&elvesz<4 && sum <21) {
         console.log(elvesz)
