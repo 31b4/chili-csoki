@@ -150,7 +150,6 @@ function ok(){
         AiRobot()
     }
 }
-
 function pvp(){
     jatekMod="pvp";
     clear()
